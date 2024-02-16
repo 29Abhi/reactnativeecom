@@ -23,17 +23,25 @@ import Card from '../Components/Card';
 import image from '../assets/Image/bannerimg.jpg';
 import image2 from '../assets/Image/bannerimg2.jpg';
 import image3 from '../assets/Image/bannerimg3.jpg';
-import callApi from '../ApisServices/Apicalling';
+import Apicalling from '../ApisServices/Apicalling';
 import Likeicon from '../Utils/Svg/Likeicon';
+import {useDispatch, useSelector} from 'react-redux';
+import {fetchproduct} from '../Redux/CartSlice';
 
 const Home = () => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
+  const dispatch = useDispatch();
+  // const product = useSelector(state => state);
+  // console.log(product.product.data.products);
+  // const alldata = product.product.data.products;
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const responseData = await callApi('https://dummyjson.com/products'); // Call the API using the callApi function
+        const baseurl = 'https://dummyjson.com/products';
+        const responseData = await Apicalling(baseurl); // Call the API using the callApi function
         setData(responseData.products);
         // console.log('data', responseData.products);
       } catch (error) {
@@ -42,6 +50,7 @@ const Home = () => {
       }
     };
 
+    dispatch(fetchproduct());
     fetchData();
   }, []);
 

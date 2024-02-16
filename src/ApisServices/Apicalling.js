@@ -1,11 +1,9 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://dummyjson.com/products'; // Your API base URL
-
 // Common function for making API calls
-const Apicalling = async (endpoint, method = 'GET', data = null) => {
+const Apicalling = async (baseurl, endpoint, method = 'GET', data = null) => {
   try {
-    const url = `${BASE_URL}`;
+    const url = `${baseurl}`;
 
     // Axios configuration object
     const config = {
