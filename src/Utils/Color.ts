@@ -9,5 +9,6 @@ color5 : "#FFBC6E",
 color6 : '#A9B4BC',
 largefontcolor : "#F8F9FB",
 greytextcolor : "#8891A5",
-headcolor : "#1E222B"
+headcolor : "#1E222B",
+icon : "#E0B420"
 }

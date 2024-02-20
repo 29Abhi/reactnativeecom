@@ -4,6 +4,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
 import Bottoamtabnavigation from './Bottamtab/Bottoamtabnavigation';
+import Cart from './Screen/Cart';
+import Productscreen from './Screen/Productscreen';
 const Appnavigator = () => {
   return (
     <NavigationContainer>
@@ -11,6 +13,16 @@ const Appnavigator = () => {
         <Stack.Screen
           name="Bottoamtabnavigation"
           component={Bottoamtabnavigation}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Cart"
+          component={Cart}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Productscreen"
+          component={Productscreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

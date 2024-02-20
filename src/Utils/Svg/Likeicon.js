@@ -1,11 +1,11 @@
 import * as React from 'react';
 import Svg, {Path} from 'react-native-svg';
-const Likeicon = props => (
+const Likeicon = ({isActive, ...props}) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={15}
     height={14}
-    fill="none"
+    fill={isActive ? '#FF8181' : 'none'}
     {...props}>
     <Path
       stroke="#323743"

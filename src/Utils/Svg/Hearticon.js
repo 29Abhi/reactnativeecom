@@ -1,11 +1,11 @@
 import * as React from 'react';
 import Svg, {Path, G} from 'react-native-svg';
-const Hearticon = props => (
+const Hearticon = ({color, ...props}) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={22}
     height={20}
-    fill="none"
+    fill={color}
     {...props}>
     <Path
       stroke="#3E4554"

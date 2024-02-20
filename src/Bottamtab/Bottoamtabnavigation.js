@@ -15,45 +15,33 @@ const Bottom = createBottomTabNavigator();
 const Bottoamtabnavigation = () => {
   const Homefunction = ({focused}) => {
     return (
-      <View style={{marginTop: '15%'}}>
-        {focused ? (
-          <Animated.View
-            style={{
-              width: 50,
-              height: 50,
-              borderRadius: 25,
-              backgroundColor: '#1E222B',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}></Animated.View>
-        ) : (
-          <Homeicon />
-        )}
+      <View style={{marginTop: '5%'}}>
+        {focused ? <Homeicon color="#E0B420" /> : <Homeicon />}
       </View>
     );
   };
 
   const Categoriefunction = ({focused}) => {
     return (
-      <Animated.View style={{marginTop: '15%'}}>
-        {focused ? <Categorieicon /> : <Homeicon />}
-      </Animated.View>
+      <View style={{marginTop: '5%'}}>
+        {focused ? <Categorieicon color="#E0B420" /> : <Categorieicon />}
+      </View>
     );
   };
 
   const Heartfunction = ({focused}) => {
     return (
-      <Animated.View style={{marginTop: '15%'}}>
-        {focused ? <Hearticon /> : <Homeicon />}
-      </Animated.View>
+      <View style={{marginTop: '5%'}}>
+        {focused ? <Hearticon color="#E0B420" /> : <Hearticon />}
+      </View>
     );
   };
 
   const Morefunction = ({focused}) => {
     return (
-      <Animated.View style={{marginTop: '15%'}}>
-        {focused ? <Moreicon /> : <Homeicon />}
-      </Animated.View>
+      <View style={{marginTop: '5%'}}>
+        {focused ? <Moreicon color="#E0B420" /> : <Moreicon />}
+      </View>
     );
   };
   return (
